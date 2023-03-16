@@ -1,3 +1,8 @@
+//Before ----
+// {
+//   "extends": "next/core-web-vitals"
+// }
+//After---- adding next/babel -- for error-> Cannot find module 'next/babel'
 {
-  "extends": "next/core-web-vitals"
+  "extends": ["next/babel","next/core-web-vitals"]
 }
