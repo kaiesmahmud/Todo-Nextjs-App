@@ -29,6 +29,7 @@ export const Todos = () => {
   return (
     <>
         <Flex
+            fontSize={['xs','sm','md']}
             w={'100%'}
             direction={'column'}
             justify={'center'}

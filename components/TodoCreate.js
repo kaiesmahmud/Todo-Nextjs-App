@@ -1,7 +1,7 @@
 import React from 'react'
 
 //Chakra UI
-import { Box, Button, Flex, FormControl, Input, Stack, useColorModeValue } from '@chakra-ui/react'
+import { Box, Button, Flex, FormControl, Input, Stack, Text, useColorModeValue } from '@chakra-ui/react'
 
 export const TodoCreate = ({setNote,setTodos,Todos,note}) => {
     const handleSubmit = (e)=>{
@@ -31,8 +31,13 @@ export const TodoCreate = ({setNote,setTodos,Todos,note}) => {
             align={'center'}
             justify={'start'}
             >
-           <h2>Add Notes</h2>
-            
+           <Text
+            fontWeight={'bold'}
+            textAlign={'center'}
+            fontSize={['lg',,'2rem']}
+        >
+            Add Notes
+        </Text>
             <Stack
                 direction={{ base: 'column', md: 'row' }}
                 as={'form'}
@@ -43,6 +48,7 @@ export const TodoCreate = ({setNote,setTodos,Todos,note}) => {
                 >
                 <FormControl>
                     <Flex
+                    fontSize={['xs','sm','md']}
                         direction={['column','column','row']}
                         gap={'4'}
                         align={'center'}
@@ -68,6 +74,7 @@ export const TodoCreate = ({setNote,setTodos,Todos,note}) => {
                             colorScheme={'green'}
                             w={'100px'}
                             type={'submit'}
+                            fontSize={['xs','sm','md']}
                             >
                             Add Note
                         </Button>

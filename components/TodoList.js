@@ -18,8 +18,8 @@ const TodoList = ({Todos,handleToggle,handleClearCompleted}) => {
     >
         <Text
             fontWeight={'bold'}
-            fontSize={'2rem'}
             textAlign={'center'}
+            fontSize={['lg',,'2rem']}
         >
             My Notes({Todos.length})
         </Text>
@@ -40,10 +40,11 @@ const TodoList = ({Todos,handleToggle,handleClearCompleted}) => {
                 borderRadius={'10px'}
                 >
                 
-                    <Text >{todo.title} </Text>
+                    <Text textTransform={'capitalize'} >{todo.title} </Text>
                    
-                    <Badge colorScheme={todo.completed?'green':'red'}>{todo.completed?'Completed':'Incomplete'}</Badge>
+                    <Badge fontSize={'xs'} colorScheme={todo.completed?'green':'red'}>{todo.completed?'Completed':'Incomplete'}</Badge>
                     <Button
+                    fontSize={['xs','sm','md']}
                         colorScheme={todo.completed?'red':'green'}
                         onClick={()=>{handleToggle(todo.id)}}
                     >
@@ -59,6 +60,7 @@ const TodoList = ({Todos,handleToggle,handleClearCompleted}) => {
             !Todos.length && <div>Empty notes</div>
         }
         <Button
+        fontSize={['xs','sm','md']}
             colorScheme={'orange'}
             padding={'20px'}
             onClick={handleClearCompleted}
